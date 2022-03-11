@@ -5,7 +5,7 @@ import os
 import HandTrackingModule as htm #change "HandTrackingModule" for whatever you name the hand tracking file
 
 #######################
-brushThickness = 25
+brushThickness = 10
 eraserThickness = 100
 ########################
 
@@ -108,8 +108,8 @@ while True:
     # Setting the header image
     img[0:125, 0:1280] = header
     #img = cv2.addWeighted(img,0.5,imgCanvas,0.5,0)
-    #cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3,
-                #(255, 0, 255), 3)
+    cv2.putText(img, str(int(fps)), (10, 70), cv2.FONT_HERSHEY_PLAIN, 3,
+                (255, 0, 255), 3)
     cv2.imshow("Image", img)
     #cv2.imshow("Canvas", imgCanvas)
     #cv2.imshow("Inv", imgInv)
